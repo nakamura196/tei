@@ -29,6 +29,10 @@
     color:brown;
   }
 
+  tei-name {
+    color:blue;
+  }
+
   p {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -117,6 +121,17 @@
         }
       }
     })
+
+    CETEIcean.addBehaviors({
+      handlers: {
+        "name": function(el) {
+          var a = $("<a>");
+          a.append(el.innerText);
+          a.attr("class", "prsName2")
+          return a[0]
+        }
+      }
+    })
   });
 
   $("body").on("click",".prsName", function(){
@@ -130,6 +145,46 @@
     for(i=0;i<arRef.length;i++){
       arSaid[i] = 'tei-said[who="'+arRef[i]+'"]';
       arPrs[i] = 'tei-persname[corresp="'+arRef[i]+'"]';
+    }
+
+    var selSaid = arSaid.join(",");
+    var selPrs = arPrs.join(",");
+
+    $("#rightwinc1").html('');
+    $(selSaid).each(function(){
+      $("#rightwinc1").html($("#rightwinc1").html()+'<li>'+$(this).html()+'</li>');
+    });
+    if($("#rightwinc1").html() == ''){
+      $("#rightwinc1").html('発話なし');
+    }
+    $("#rightwinc2").html('');
+    var winc2 = [];
+
+    var i = 0
+    $(selPrs).each(function(){
+      winc2[i] = '<li>'+$(this).html()+'</li>';
+      i++;
+    });
+
+    var winc2Text = '';
+    for(i in winc2){
+      winc2Text += winc2[i];
+    }
+    $("#rightwinc2").html(winc2Text);
+
+  });
+
+  $("body").on("click",".prsName2", function(){
+
+    var ref = $(this).parent().attr("ref");
+
+    var arRef = ref.split(" ");
+    var arSaid = [];
+    var arPrs = [];
+
+    for(i=0;i<arRef.length;i++){
+      arSaid[i] = 'tei-said[who="'+arRef[i]+'"]';
+      arPrs[i] = 'tei-name[ref="'+arRef[i]+'"]';
     }
 
     var selSaid = arSaid.join(",");
