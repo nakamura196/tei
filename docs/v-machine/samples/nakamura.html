@@ -1,0 +1,261 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>中村式五十音 -- The Versioning Machine 5.0</title>
+      <meta charset="utf-8"></meta>
+      <link rel="stylesheet" type="text/css" href="../src/js/jquery-ui-1.11.3/jquery-ui.min.css"></link>
+      <link rel="stylesheet" type="text/css" href="../src/vmachine.css"></link><script type="text/javascript" src="../src/js/jquery-1.11.2.min.js"></script><script type="text/javascript" src="../src/js/jquery-ui-1.11.3/jquery-ui.min.js"></script><link rel="stylesheet" type="text/css" href="../src/panzoom/panzoom.css"></link><script type="text/javascript" src="../src/panzoom/jquery.panzoom.min.js"></script><script type="text/javascript">
+       /*NOTES PANEL: To change the VM so
+      that the notes panel page does not appear at the initial load, change the constant
+      INITIAL_DISPLAY_BIB_PANEL from "true" to "false" below */ INITIAL_DISPLAY_NOTES_PANEL =
+         false; /*BIB PANEL: To change the VM so that the
+      bibliographic information page does not appear at the initial load, change the constant
+      INITIAL_DISPLAY_BIB_PANEL from "true" to "false" below */ INITIAL_DISPLAY_BIB_PANEL =
+         true; /**The number of version/witness panels to be
+      displayed initially */ INITIAL_DISPLAY_NUM_VERSIONS = 2; /** CRIT PANEL: Critical information should be encoded as
+      tei:notesStmt/tei:note[@type='critIntro'] in the TEI files --&gt; * To change the VM so that
+      the critical information page does not * appear at the initial load, change the constant
+      INITIAL_DISPLAY_CRIT_PANEL from "true" to "false" */ INITIAL_DISPLAY_CRIT_PANEL =
+         false; /** To change the VM so that line numbers are
+      hidden by default, change the constant INITIAL_DISPLAY_LINENUMBERS from * "true" to "false" */
+      INITIAL_DISPLAY_LINENUMBERS = true; var timelinePoints = new Array();var timelineDurations = new Array();</script><script type="text/javascript" src="../src/vmachine.js"></script></head>
+   <body>
+      <div id="mainBanner">
+         <div id="brandingLogo"><a href="../samples.html"><img id="logo" alt="Powered by the Versioning Machine" src="../vm-images/LogoSilver.png"></img></a></div>
+         <div id="bannerImageContainer"><img id="logo" alt="Powered by the Versioning Machine" src="../vm-images/HeaderBackground.png"></img><div id="headline">
+               <h1>中村式五十音</h1>
+            </div>
+            <nav id="mainControls">
+               <ul>
+                  <li><button id="selectVersion" class="topMenuButton dropdownButton">3 Total Versions<img class="noDisplay" src="vmachine-Dateien/menuArrowUp.htm" alt="arrow up"></img><img src="vmachine-Dateien/menuArrowDown.htm" alt="arrow down"></img></button><ul id="versionList" class="dropdown notVisible">
+                        <li data-panelid="五音">
+                           <div class="listText">
+                              <div><a href="#" title="五音: 中村式五十音">Version 五音</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                        <li data-panelid="又様">
+                           <div class="listText">
+                              <div><a href="#" title="又様: 中村式五十音又様">Version 又様</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                        <li data-panelid="欠本">
+                           <div class="listText">
+                              <div><a href="#" title="欠本: 中村式五十音欠損本">Version 欠本</a></div>
+                              <div><button>OFF</button></div>
+                           </div>
+                        </li>
+                     </ul>
+                  </li>
+                  <li data-panelid="bibPanel" title="Clicking this button triggers the bibliographic panel to appear&#xA;            or disappear."><button class="topMenuButton">Bibliographic panel</button></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <div id="mssArea">
+         <div id="bibPanel" class="ui-widget-content ui-resizable panel noDisplay">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="vmachine-Dateien/closePanelButton.htm" alt="X (Close panel)"></img> Bibliographic Information 
+            </div>
+            <div class="bibContent">
+               <h2>中村式五十音</h2>
+               <h4>Original Source</h4>
+               
+               中村式五十音
+               中村式五十音又様
+               中村式五十音欠損本
+               
+               
+               <h4>Witness List</h4>
+               <ul>
+                  <li><strong>Witness 五音:</strong> 中村式五十音
+                  </li>
+                  <li><strong>Witness 又様:</strong> 中村式五十音又様
+                  </li>
+                  <li><strong>Witness 欠本:</strong> 中村式五十音欠損本
+                  </li>
+               </ul>
+               <h4>Electronic Edition Information:</h4>
+               <h5>Publication Details:</h5>
+               
+               <p></p>
+               
+               <h4>Encoding Principles</h4>
+               
+               
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="五音">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="vmachine-Dateien/closePanelButton.htm" alt="X (Close panel)"></img><a title="Version 五音: 中村式五十音">Version 五音: 中村式五十音</a></div>
+            <div class="mssContent">
+               
+               <div class="paragraph">
+                  
+                  <div class="lineWrapper line_1" data-line-id="line_1">
+                     <div class="line 五音 又様 欠本"><span class="textcontent">あいうえお</span></div>
+                  </div>
+                  
+                  <div class="lineWrapper line_2" data-line-id="line_2">
+                     <div class="line">
+                        
+                        <div style="display:inline" class="apparatus apparatus_1" data-app-id="apparatus_1">
+                           
+                           <div style="display:inline" class="reading 五音" data-reading-wits="五音"><span class="textcontent">かきくけこ</span></div>
+                           
+                           <div class="reading 又様" data-reading-wits="又様"><span class="textcontent">こけきくか</span></div>
+                           
+                           <div class="reading 欠本" data-reading-wits="欠本"><span class="textcontent">きこ</span></div>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+                  
+                  <div class="lineWrapper line_3" data-line-id="line_3">
+                     <div class="line 五音 又様 欠本"><span class="textcontent">さしすせそ</span></div>
+                  </div>
+                  
+                  <div class="lineWrapper line_4" data-line-id="line_4">
+                     <div class="line"><span class="textcontent"> た </span><div style="display:inline" class="apparatus apparatus_2" data-app-id="apparatus_2">
+                           
+                           <div style="display:inline" class="reading 五音 欠本" data-reading-wits="五音 欠本"><span class="textcontent">ち</span></div>
+                           
+                           <div class="reading 又様" data-reading-wits="又様"><span class="textcontent">じ</span></div>
+                           
+                        </div>
+                        
+                        <div style="display:inline" class="apparatus apparatus_3" data-app-id="apparatus_3">
+                           
+                           <div style="display:inline" class="reading 五音" data-reading-wits="五音"><span class="textcontent">ぬ</span></div>
+                           
+                           <div class="reading 又様" data-reading-wits="又様"><span class="textcontent">づ</span></div>
+                           
+                           <div class="reading 欠本 emptyReading" data-reading-wits="欠本"></div>
+                           
+                        </div><span class="textcontent"> てと </span></div>
+                  </div>
+                  
+               </div>
+               
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="又様">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="vmachine-Dateien/closePanelButton.htm" alt="X (Close panel)"></img><a title="Version 又様: 中村式五十音又様">Version 又様: 中村式五十音又様</a></div>
+            <div class="mssContent">
+               
+               <div class="paragraph">
+                  
+                  <div class="lineWrapper line_1" data-line-id="line_1">
+                     <div class="line 五音 又様 欠本"><span class="textcontent">あいうえお</span></div>
+                  </div>
+                  
+                  <div class="lineWrapper line_2" data-line-id="line_2">
+                     <div class="line">
+                        
+                        <div style="display:inline" class="apparatus apparatus_1" data-app-id="apparatus_1">
+                           
+                           <div class="reading 五音" data-reading-wits="五音"><span class="textcontent">かきくけこ</span></div>
+                           
+                           <div style="display:inline" class="reading 又様" data-reading-wits="又様"><span class="textcontent">こけきくか</span></div>
+                           
+                           <div class="reading 欠本" data-reading-wits="欠本"><span class="textcontent">きこ</span></div>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+                  
+                  <div class="lineWrapper line_3" data-line-id="line_3">
+                     <div class="line 五音 又様 欠本"><span class="textcontent">さしすせそ</span></div>
+                  </div>
+                  
+                  <div class="lineWrapper line_4" data-line-id="line_4">
+                     <div class="line"><span class="textcontent"> た </span><div style="display:inline" class="apparatus apparatus_2" data-app-id="apparatus_2">
+                           
+                           <div class="reading 五音 欠本" data-reading-wits="五音 欠本"><span class="textcontent">ち</span></div>
+                           
+                           <div style="display:inline" class="reading 又様" data-reading-wits="又様"><span class="textcontent">じ</span></div>
+                           
+                        </div>
+                        
+                        <div style="display:inline" class="apparatus apparatus_3" data-app-id="apparatus_3">
+                           
+                           <div class="reading 五音" data-reading-wits="五音"><span class="textcontent">ぬ</span></div>
+                           
+                           <div style="display:inline" class="reading 又様" data-reading-wits="又様"><span class="textcontent">づ</span></div>
+                           
+                           <div class="reading 欠本 emptyReading" data-reading-wits="欠本"></div>
+                           
+                        </div><span class="textcontent"> てと </span></div>
+                  </div>
+                  
+               </div>
+               
+            </div>
+         </div>
+         <div class="ui-widget-content ui-resizable panel mssPanel noDisplay" id="欠本">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="vmachine-Dateien/closePanelButton.htm" alt="X (Close panel)"></img><a title="Version 欠本: 中村式五十音欠損本">Version 欠本: 中村式五十音欠損本</a></div>
+            <div class="mssContent">
+               
+               <div class="paragraph">
+                  
+                  <div class="lineWrapper line_1" data-line-id="line_1">
+                     <div class="line 五音 又様 欠本"><span class="textcontent">あいうえお</span></div>
+                  </div>
+                  
+                  <div class="lineWrapper line_2" data-line-id="line_2">
+                     <div class="line">
+                        
+                        <div style="display:inline" class="apparatus apparatus_1" data-app-id="apparatus_1">
+                           
+                           <div class="reading 五音" data-reading-wits="五音"><span class="textcontent">かきくけこ</span></div>
+                           
+                           <div class="reading 又様" data-reading-wits="又様"><span class="textcontent">こけきくか</span></div>
+                           
+                           <div style="display:inline" class="reading 欠本" data-reading-wits="欠本"><span class="textcontent">きこ</span></div>
+                           
+                        </div>
+                        
+                     </div>
+                  </div>
+                  
+                  <div class="lineWrapper line_3" data-line-id="line_3">
+                     <div class="line 五音 又様 欠本"><span class="textcontent">さしすせそ</span></div>
+                  </div>
+                  
+                  <div class="lineWrapper line_4" data-line-id="line_4">
+                     <div class="line"><span class="textcontent"> た </span><div style="display:inline" class="apparatus apparatus_2" data-app-id="apparatus_2">
+                           
+                           <div style="display:inline" class="reading 五音 欠本" data-reading-wits="五音 欠本"><span class="textcontent">ち</span></div>
+                           
+                           <div class="reading 又様" data-reading-wits="又様"><span class="textcontent">じ</span></div>
+                           
+                        </div>
+                        
+                        <div style="display:inline" class="apparatus apparatus_3" data-app-id="apparatus_3">
+                           
+                           <div class="reading 五音" data-reading-wits="五音"><span class="textcontent">ぬ</span></div>
+                           
+                           <div class="reading 又様" data-reading-wits="又様"><span class="textcontent">づ</span></div>
+                           
+                           <div style="display:inline" class="reading 欠本 emptyReading" data-reading-wits="欠本"></div>
+                           
+                        </div><span class="textcontent"> てと </span></div>
+                  </div>
+                  
+               </div>
+               
+            </div>
+         </div>
+         <div id="notesPanel" class="ui-widget-content ui-resizable panel noDisplay">
+            <div class="panelBanner"><img class="closePanel" title="Close panel" src="vmachine-Dateien/closePanelButton.htm" alt="X (Close panel)"></img> Textual Notes 
+            </div>
+            <div id="noNotesFound" class="noteContent"> Sorry, but there are no notes associated with
+               any currently displayed witness. 
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

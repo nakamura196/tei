@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../src/vmachine.xsl" type="text/xsl" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:eaj="http://www.example.org/ns/ejaTEI">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>絵入り源氏物語＋校異源氏物語</title>
+         </titleStmt>
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+         <sourceDesc>
+            <listWit>
+               <witness xml:id="国絵">国文学研究資料館 絵入り源氏</witness>
+               <witness xml:id="校異源氏">校異源氏物語</witness>
+               <witness xml:id="靑大">靑表紙本系 大島本</witness>
+               <witness xml:id="靑肖">靑表紙本系 肖柏本</witness>
+               <witness xml:id="靑三">靑表紙本系 三條西家本</witness>
+               <witness xml:id="靑横">靑表紙本系 横山本</witness>
+               <witness xml:id="靑池">靑表紙本系 池田本</witness>
+               <witness xml:id="河">河内本</witness>
+               <witness xml:id="御">河内本系 御物本</witness>
+               <witness xml:id="別">別本</witness>
+               <witness xml:id="別國">別本 國冬本</witness>
+               <witness xml:id="別陽">別本 陽明本</witness>
+               <witness xml:id="別麥">別本 麥生本</witness>
+
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <facsimile>
+      <graphic
+         url="http://www2.dhii.jp/loris/NIJL0001/SA4-0026/SA4-0026-00000.jpg/full/full/0/default.jpg"/>
+      <graphic
+         url="http://www2.dhii.jp/loris/NIJL0001/SA4-0026/SA4-0026-00001.jpg/full/full/0/default.jpg"/>
+      <surface>
+         <graphic
+            url="http://www2.dhii.jp/loris/NIJL0001/SA4-0026/SA4-0026-00002.jpg/full/full/0/default.jpg"/>
+         <zone xml:id="zone_khm_tzk_rbb" lry="1503" lrx="2773" uly="790" ulx="2684"/>
+         <zone xml:id="zone_xyj_vyk_rbb" lry="3190" lrx="2665" uly="800" ulx="2520"/>
+         <zone xml:id="zone_d4d_wyk_rbb" lry="3180" lrx="2480" uly="820" ulx="2350"/>
+         <zone xml:id="zone_jy5_mzk_rbb" lry="3176" lrx="2330" uly="816" ulx="2200"/>
+         <zone xml:id="zone_d5k_nzk_rbb" lry="3183" lrx="2160" uly="809" ulx="2034"/>
+         <zone xml:id="zone_tmh_4zk_rbb" lry="3160" lrx="1996" uly="806" ulx="1873"/>
+         <zone xml:id="zone_stf_pzk_rbb" lry="3176" lrx="1846" uly="820" ulx="1700"/>
+         <zone xml:id="zone_amb_qzk_rbb" lry="3163" lrx="1663" uly="817" ulx="1523"/>
+         <zone xml:id="zone_jpy_qzk_rbb" lry="3166" lrx="1526" uly="830" ulx="1363"/>
+         <zone xml:id="zone_vxr_rzk_rbb" lry="3173" lrx="1370" uly="820" ulx="1210"/>
+         <zone xml:id="zone_nbj_szk_rbb" lry="3183" lrx="1193" uly="833" ulx="1026"/>
+         <zone xml:id="zone_vqx_szk_rbb" lry="3170" lrx="1010" uly="834" ulx="870"/>
+      </surface>
+      <surface>
+         <graphic
+            url="http://www2.dhii.jp/loris/NIJL0001/SA4-0026/SA4-0026-00003.jpg/full/full/0/default.jpg"/>
+         <zone xml:id="zone_flz_wnw_rbb" lry="3156" lrx="4770" uly="800" ulx="4596"/>
+         <zone xml:id="zone_cb1_ynw_rbb" lry="3143" lrx="4593" uly="810" ulx="4443"/>
+         <zone xml:id="zone_as5_ynw_rbb" lry="3143" lrx="4413" uly="810" ulx="4276"/>
+         <zone xml:id="zone_mgs_znw_rbb" lry="3176" lrx="4246" uly="803" ulx="4090"/>
+         <zone xml:id="zone_kgq_14w_rbb" lry="3160" lrx="4086" uly="793" ulx="3934"/>
+         <zone xml:id="zone_zqf_b4w_rbb" lry="3150" lrx="3930" uly="816" ulx="3770"/>
+         <zone xml:id="zone_lmx_b4w_rbb" lry="3166" lrx="3790" uly="796" ulx="3613"/>
+         <zone xml:id="zone_xrt_c4w_rbb" lry="3180" lrx="3636" uly="803" ulx="3436"/>
+         <zone xml:id="zone_vbp_d4w_rbb" lry="3186" lrx="3453" uly="817" ulx="3276"/>
+         <zone xml:id="zone_pdm_24w_rbb" lry="3206" lrx="3293" uly="823" ulx="3126"/>
+         <zone xml:id="zone_c2l_f4w_rbb" lry="3203" lrx="3113" uly="819" ulx="2933"/>
+         <zone xml:id="zone_kjn_g4w_rbb" lry="3216" lrx="2666" uly="853" ulx="2526"/>
+         <zone xml:id="zone_uh2_h4w_rbb" lry="3196" lrx="2500" uly="856" ulx="2379"/>
+         <zone xml:id="zone_dvv_h4w_rbb" lry="3216" lrx="2356" uly="856" ulx="2196"/>
+         <zone xml:id="zone_fbm_34w_rbb" lry="3186" lrx="2180" uly="857" ulx="2046"/>
+         <zone xml:id="zone_pm1_j4w_rbb" lry="3216" lrx="2036" uly="870" ulx="1869"/>
+         <zone xml:id="zone_jt4_j4w_rbb" lry="3206" lrx="1840" uly="840" ulx="1696"/>
+         <zone xml:id="zone_c1j_k4w_rbb" lry="3213" lrx="1696" uly="863" ulx="1530"/>
+         <zone xml:id="zone_gzb_l4w_rbb" lry="3200" lrx="1506" uly="850" ulx="1360"/>
+         <zone xml:id="zone_ykc_gsw_rbb" lry="3196" lrx="1356" uly="846" ulx="1212"/>
+         <zone xml:id="zone_qnr_gsw_rbb" lry="3213" lrx="1176" uly="853" ulx="1049"/>
+         <zone xml:id="zone_dcf_hsw_rbb" lry="3206" lrx="1026" uly="856" ulx="886"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <p>
+            <note source="#zone_khm_tzk_rbb">源氏誕生より十二才まて有</note>
+            <lb source="#zone_xyj_vyk_rbb"/><anchor type="lb" source="#校異源氏" n="v1p005_01"/>いづれの御時にか女御更衣あまたさふらひ<app>
+               <lem wit="#校異源氏 #別麥 #別 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #靑大">給ける</lem>
+               <rdg wit="#河">たまふ</rdg>
+               <rdg wit="#別國">給</rdg>
+            </app>
+            <lb source="#zone_d4d_wyk_rbb"/>なかに。いとやむごとなききは<anchor type="lb" source="#校異源氏"
+               n="v1p005_02"/>にはあらぬが。 <lb source="#zone_jy5_mzk_rbb"/>すぐれてときめき給ふ<app>
+               <lem wit="#校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #靑大">ありけり</lem>
+               <rdg wit="#別陽">おはしけり</rdg>
+            </app><app>
+               <lem wit="#校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #別國 #靑大">はじめ</lem>
+               <rdg wit="#御">本</rdg>
+            </app>よりわれ <lb source="#zone_d5k_nzk_rbb"/>はと思ひあがり給<app>
+               <lem wit="#国絵 #別陽 #別國 #校異源氏 #別 #河 #靑池 #靑横 #靑三 #靑肖 #別麥">へる</lem>
+               <rdg wit="#靑大"><del>ひつ</del><add>へ</add>る</rdg>
+            </app><app>
+               <lem wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #別國 #靑大">御</lem>
+               <rdg wit="#別麥"/>
+            </app> かた<anchor type="lb" source="#校異源氏" n="v1p005_03"/>／"＼<app>
+               <lem wit="#国絵">。</lem>
+               <rdg wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #靑大"/>
+               <rdg wit="#別陽 #別國 #別麥">は</rdg>
+            </app>めざましきもの <lb source="#zone_tmh_4zk_rbb"/>に<app>
+               <lem wit="#校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #靑大">おとしめ</lem>
+               <rdg wit="#御 #別陽">おもひをとしめ</rdg>
+            </app>そねみ給<app>
+               <lem wit="#国絵">。おなしほど</lem>
+               <rdg wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #別國 #靑大">おなしほと</rdg>
+               <rdg wit="#別陽">ける</rdg>
+            </app>。それより <lb source="#zone_stf_pzk_rbb"/>下らうの更衣たち<anchor type="lb" source="#校異源氏"
+               n="v1p005_04"/>
+            <app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大">はまして</lem>
+               <rdg wit="#別陽">なとは</rdg>
+               <rdg wit="#別國">なとまて</rdg>
+            </app><app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #靑大">やすからず</lem>
+               <rdg wit="#別陽"/>
+            </app>あさゆふ <lb source="#zone_amb_qzk_rbb"/>のみやづかへに<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #靑大">つけても</lem>
+               <rdg wit="#別陽">つけつゝもやすからぬ事おほく思ひつむるまゝに</rdg>
+            </app>。人のこゝろを<app>
+               <lem wit="#国絵 #靑肖 #靑三 #別陽 #別國 #靑大"/>
+               <rdg wit="#靑横">み</rdg>
+               <rdg wit="#校異源氏 #別麥 #別 #御 #河 #靑池">のみ</rdg>
+            </app>うごかし。<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #靑大">う <lb
+                     source="#zone_jpy_qzk_rbb"/>ら<anchor type="lb" source="#校異源氏" n="v1p005_05"
+                  />み</lem>
+               <rdg wit="#別陽">なけき</rdg>
+            </app>をおふつもりにや<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #靑大">ありけむ</lem>
+               <rdg wit="#別陽"/>
+            </app>いとあづしく <lb source="#zone_vxr_rzk_rbb"/>なりゆき<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #靑大"/>
+               <rdg wit="#別陽">て</rdg>
+            </app>もの心ぼそげに <app>
+               <lem wit="#校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大"/>
+               <rdg wit="#御 #別國">て</rdg>
+               <rdg wit="#別陽">思ひ</rdg>
+            </app> さとがち<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #靑大"/>
+               <rdg wit="#別國">に</rdg>
+            </app>な<anchor type="lb" source="#校異源氏" n="v1p005_06"/>るをいよ／＼ <lb
+               source="#zone_nbj_szk_rbb"/><app>
+               <lem wit="#国絵">あかず</lem>
+               <rdg wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #別陽 #靑大">あかす</rdg>
+               <rdg wit="#別國"/>
+            </app> あはれなるものに<app>
+               <lem wit="#国絵 #靑肖 #靑三 #別國">おほゝして</lem>
+               <rdg wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #別陽 #靑大">おもほして</rdg>
+            </app>。人<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #靑大"/>
+               <rdg wit="#別國">／＼</rdg>
+            </app>のそし <lb source="#zone_vqx_szk_rbb"/>りをも<app>
+               <lem wit="#校異源氏 #別麥 #別國 #御 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大">え</lem>
+               <rdg wit="#河 #別 #別陽"/>
+            </app>はゞからせ給 <anchor type="lb" source="#校異源氏" n="v1p005_07"/>はず。世のためし<app>
+               <lem wit="#校異源氏 #別麥 #別國 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大">に</lem>
+               <rdg wit="#別陽">と</rdg>
+            </app>もなり <lb source="#zone_flz_wnw_rbb"/>ぬべき御もてなしなり。 <app>
+               <lem wit="#校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別國 #別陽 #靑大">かんだちめ</lem>
+               <rdg wit="#御">上達</rdg>
+            </app>。 <app>
+               <lem wit="#校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #靑大">うへ人</lem>
+               <rdg wit="#御 #別國">天上人</rdg>
+            </app>なども。 <lb source="#zone_cb1_ynw_rbb"/><app>
+               <lem wit="#国絵">あひなく</lem>
+               <rdg wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #別陽 #靑大">あいなく</rdg>
+               <rdg wit="#別國"/>
+            </app>
+            <anchor type="lb" source="#校異源氏" n="v1p005_08"/>めをそばめ<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #靑大">つゝ</lem>
+               <rdg wit="#別國">て</rdg>
+            </app>いとま <app>
+               <lem wit="#国絵">ば</lem>
+               <rdg wit="#校異源氏 #別麥 #別國 #別 #河 #靑池 #靑横 #靑三 #靑肖 #別陽 #靑大">は</rdg>
+               <rdg wit="#御">え</rdg>
+            </app>ゆき人の<app>
+               <lem wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #靑大">御</lem>
+               <rdg wit="#別國 #別麥"/>
+            </app>覚え <lb source="#zone_as5_ynw_rbb"/><app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大">なり</lem>
+               <rdg wit="#別陽 #別國">かな</rdg>
+            </app> もろこしにもかゝることのをご<anchor type="lb" source="#校異源氏" n="v1p005_09"/>りにこそ<app>
+               <lem wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #別陽 #靑大"/>
+               <rdg wit="#別國">は</rdg>
+            </app>世 <app>
+               <lem wit="#校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大">も</lem>
+               <rdg wit="#御 #別國">の</rdg>
+               <rdg wit="#別陽">は</rdg>
+            </app>
+            <lb source="#zone_mgs_znw_rbb"/>みだれあし<app>
+               <lem wit="#国絵 #校異源氏 #別麥 #別 #河 #靑池 #靑横 #靑三 #靑肖 #靑大">かりけれと</lem>
+               <rdg wit="#御">かりけれは</rdg>
+               <rdg wit="#別陽">きこともいてきけれともてなやむほとに</rdg>
+               <rdg wit="#別國">くはなりけれと</rdg>
+            </app>。やう／＼あめのした <lb source="#zone_kgq_14w_rbb"/><app>
+               <lem wit="#国絵">にもあぢきなう人のもてなやみぐさ</lem>
+               <rdg wit="#校異源氏 #別麥 #別 #御 #河 #靑横 #靑三 #靑肖 #靑大">にもあちきなう人のも<anchor type="lb"
+                     source="#校異源氏" n="v1p005_10"/>てなやみくさ</rdg>
+               <rdg wit="#靑池">にもあちきなう人のもてなや<add>み</add>くさ</rdg>
+               <rdg wit="#別陽">のあつかひくさに</rdg>
+               <rdg wit="#別國">にもあひなう人のもてなやみくさ</rdg>
+            </app> になりて楊貴 <lb source="#zone_zqf_b4w_rbb"/>妃のためしもひきいでつべうなりゆくに。いと <lb
+               source="#zone_lmx_b4w_rbb"/>はした<anchor type="lb" source="#校異源氏" n="v1p005_11"/>なきこと<app>
+               <lem wit="#国絵">おほかれど</lem>
+               <rdg wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #別陽 #靑大 #別國">おほかれと</rdg>
+               <rdg wit="#別麥">おほかりけれと人の御おほえ</rdg>
+            </app>かたじけなき <app>
+               <lem wit="#国絵 #校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #別陽 #別國 #別麥"/>
+               <rdg wit="#靑大"><del>事おほかれ</del></rdg>
+            </app>御心<app>
+               <lem wit="#国絵">ばへ</lem>
+               <rdg wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #靑大 #別麥">はへ</rdg>
+               <rdg wit="#別陽 #別國">さし</rdg>
+            </app>の <lb source="#zone_xrt_c4w_rbb"/>た<app>
+               <lem wit="#国絵">ぐ</lem>
+               <rdg wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大 #別國 #別麥 #別陽">く</rdg>
+            </app>ひなき<app>
+               <lem wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大 #別國 #別麥">をたのみにて</lem>
+               <rdg wit="#別陽">ひとつをなくさめにて</rdg>
+            </app>まじらひ<anchor type="lb" source="#校異源氏" n="v1p005_12"/>給ちゝ<app>
+               <lem wit="#国絵 #校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑肖 #靑大 #別陽 #別國 #別麥">の</lem>
+               <rdg wit="#靑三"><del>の</del></rdg>
+            </app>大納言 <lb source="#zone_vbp_d4w_rbb"/><app>
+               <lem wit="#国絵 #校異源氏 #別 #御 #河 #靑池 #靑三 #靑肖 #靑大 #別麥 #靑横">は</lem>
+               <rdg wit="#別陽"/>
+               <rdg wit="#別國">も</rdg>
+            </app><app>
+               <lem wit="#国絵 #校異源氏 #別 #御 #河 #靑池 #靑三 #靑肖 #靑大 #別陽 #別麥 #別國"/>
+               <rdg wit="#靑横">か</rdg>
+            </app>なくなり<app>
+               <lem wit="#国絵 #校異源氏 #別 #御 #河 #靑池 #靑三 #靑肖 #靑大 #別麥 #靑横 #別國">て</lem>
+               <rdg wit="#別陽">給て</rdg>
+            </app>はゝ北のかた<app>
+               <lem wit="#国絵 #校異源氏 #別 #御 #河 #靑池 #靑三 #靑肖 #靑大 #別麥 #靑横 #別陽">なん</lem>
+               <rdg wit="#別國">なんくしたまへる</rdg>
+               <rdg wit="#別麥">そ</rdg>
+            </app>いにしへ<app>
+               <lem wit="#国絵 #校異源氏 #別 #御 #靑池 #靑横 #靑三 #靑大 #別陽 #別國 #別麥">の</lem>
+               <rdg wit="#靑肖 #河"/>
+            </app><app>
+               <lem wit="#国絵">人のよしあ</lem>
+               <rdg wit="#校異源氏 #別 #御 #靑肖 #靑池 #靑横 #靑三 #靑大 #河">人のよしあるにておやうちくしさしあたりて世のおほえはな</rdg>
+               <rdg wit="#別陽">よしある人にておやうちくしさしあたりて世のおほえはな</rdg>
+               <rdg wit="#別麥">人のよしあるまておやうちくしさしあたりて世のおほえはな</rdg>
+               <rdg wit="#別國">人のよしあるにておやなしとても世のおほえはな</rdg>
+            </app>
+            <lb source="#zone_pdm_24w_rbb"/>やか<app>
+               <lem wit="#国絵 #靑肖 #靑三">なる御かた／"＼にも</lem>
+               <rdg wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑大 #別麥 #別陽">なる御かた／"＼にもいたう</rdg>
+               <rdg wit="#別國">におや／＼うちくし給える／＼にも</rdg>
+            </app>おとらず。何<anchor type="lb" source="#校異源氏" n="v1p005_14"/><app>
+               <lem wit="#国絵">事＄の</lem>
+               <rdg wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #国絵 #靑大 #別國 #別麥 #別陽">ことの</rdg>
+            </app>ぎしき <lb source="#zone_c2l_f4w_rbb"/><!--行を間違えてる感じなので要チェック-->るにておや<anchor type="lb" source="#校異源氏"
+               n="v1p005_13"/>うち<app>
+               <lem wit="#国絵">ぐ</lem>
+               <rdg wit="#校異源氏 #別麥 #別 #御 #河 #靑池 #靑横 #靑三 #靑肖 #別陽 #別國 #靑大">く</rdg>
+            </app>しさしあたりて世の覚え花 <lb source="#zone_kjn_g4w_rbb"/>をももてなし給けれど。とりたてゝはか／"＼し <lb
+               source="#zone_uh2_h4w_rbb"/>き<app>
+               <lem wit="#国絵 #靑肖 #靑三">御</lem>
+               <rdg wit="#校異源氏 #別 #御 #河 #靑池 #靑横 #靑大"/>
+            </app>うしろみし<anchor type="lb" source="#校異源氏" n="v1p006_01"/>なければ。ことある時はなをより <lb
+               source="#zone_dvv_h4w_rbb"/>所なく心ぼそげなりさきの世にも御ちぎりやふか <lb source="#zone_fbm_34w_rbb"
+               />か<anchor type="lb" source="#校異源氏" n="v1p006_02"/>りけん世になくきよらなるたまのおのこみこ <lb
+               source="#zone_pm1_j4w_rbb"/>さへむまれ給ぬいつしかと心も<anchor type="lb" source="#校異源氏"
+               n="v1p006_03"/>とながらせ給て <lb source="#zone_jt4_j4w_rbb"/>いそぎまいらせて御覧ずるにめづらかなるちご <lb
+               source="#zone_c1j_k4w_rbb"/>の御かたちなり<anchor type="lb" source="#校異源氏" n="v1p006_04"
+            />一のみこは右大臣の女御の御はら <lb source="#zone_gzb_l4w_rbb"/>にて。よせおもくうたがひなきまうけのきみと。 <lb
+               source="#zone_ykc_gsw_rbb"/>世<anchor type="lb" source="#校異源氏" n="v1p006_05"
+            />にもてかしづき聞ゆれどこの御にほひにはなら <lb source="#zone_qnr_gsw_rbb"/>び給べくもあらざりければ。お<anchor type="lb"
+               source="#校異源氏" n="v1p006_06"/>ほかたのやんごとなき <lb source="#zone_dcf_hsw_rbb"
+            />御おもひにてこのきみをばわたくしものにおほゝし </p>
+      </body>
+   </text>
+</TEI>
