@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="../src/vmachine.xsl" type="text/xsl" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:eaj="http://www.example.org/ns/ejaTEI">
+      <teiHeader>
+            <fileDesc>
+                  <titleStmt>
+                        <title>水滸伝</title>
+                  </titleStmt>
+                  <publicationStmt>
+                        <p/>
+                  </publicationStmt>
+                  <sourceDesc>
+                        <listWit>
+                              <witness xml:id="A006267">A006267</witness>
+                              <witness xml:id="A006371">A006371</witness>
+                        </listWit>
+                  </sourceDesc>
+            </fileDesc>
+            <encodingDesc>
+                  <variantEncoding method="parallel-segmentation" location="internal"/>
+            </encodingDesc>
+      </teiHeader>
+      <text>
+            <body>
+                  <pb n="12"/>
+                  <!-- https://iiif.dl.itc.u-tokyo.ac.jp/repo/s/uparl2/document/1251c78e-4633-43ad-9e0d-49952ee2b6c8#?c=0&m=0&s=0&cv=14&xywh=-574%2C-289%2C7199%2C5555 -->
+                  <p>
+                        <app>
+                              <rdg wit="#A006267">
+                                    <lb/>鍾伯敬先生批評水滸傳卷之二 <lb/>　第二囘 <lb/>　　　王教頭私走延安府　九紋龍大閙史家村 <lb/>　　詩曰
+                                    <lb/>　千古幽扄一旦開　天罡地煞出泉臺　自來無事多生事　本 <lb/>　爲禳災却惹灾　社稷從今雲擾擾　后戈到處閙垓垓　高俅
+                                    <lb/>　奸侫𨿽堪恨　洪信從今釀禍胎 </rdg>
+                              <rdg wit="#A006371">
+                                    <lb/>　　第二囘　王教頭私走延安府 九紋龍大閙史家村 <lb/>　　千古幽扃一旦開　天罡地殺出星臺　自來無事多生事
+                                    <lb/>　　本爲禳災𨚫惹災　社覆從今雲擾擾　兵戈到处閙垓垓 <lb/>　　高俅奸侫眞堪恨　洪信從今釀禍胎 </rdg>
+
+                        </app>
+                        <lb/><app>
+                              <rdg wit="#A006267">話說</rdg>
+                              <rdg wit="#A006371"/>
+                        </app>當時<app>
+                              <rdg wit="#A006267">住持眞人</rdg>
+                              <rdg wit="#A006371">道官</rdg>
+                        </app>對洪太尉說<app>
+                              <rdg wit="#A006267">道太尉不知此殿中當𥘉是祖老<lb/>天師洞玄眞人傳下法符囑付道此殿内</rdg>
+                              <rdg wit="#A006371">是老祖天師洞玄眞人</rdg>
+                        </app>鎭鎻着三十六<app>
+                              <rdg wit="#A006267">貟</rdg>
+                              <rdg wit="#A006371">員</rdg>
+                        </app>天罡</p>
+
+            </body>
+      </text>
+</TEI>
