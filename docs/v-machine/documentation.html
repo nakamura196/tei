@@ -22,7 +22,7 @@
       </div>
       <div class="clear"></div>
 <div id="maintext">
-<h1>Documentation</h1> <h2>Versioning Machine 5.0</h2> 
+<h1>Documentation</h1> <h2>Versioning Machine 5.0</h2>
 
 <p class="byline">by Lara Vetter, Maryland Institute for Technology in the Humanities, Summer 2003; Jarom McDonald, Maryland Institute for Technology in the Humanities, January 2005; Sean Daugherty, University of Maryland Libraries, November 2006, March 2007, and July 2007; Tanya Clement, Digital Cultures and Creativity, University of Maryland and Susan Schreibman, Digital Humanities Observatory, June 2010; and Roman Bleier and Joshua D. Savage, An Foras Feasa at the Maynooth University Institute for the Humanities, 2015.</p>
 
@@ -67,7 +67,7 @@
 </ul>
 &nbsp;
 <h3 id="over" class="item">Overview</h3>
- <p>The Versioning Machine (VM) is a software tool designed by literary scholars, programmers, and web designers at several institutions, including An Foras Feasa at the Maynooth University Institute for the Humanities, the Digital Humanities Observatory (DHO), the Maryland Institute for Technology in the Humanities (MITH), and the Office of Digital Collections and Research (DCR) at University of Maryland Libraries. The VM not only provides for elements traditionally found in codex-based critical editions, such as annotation and introductory material, but it also takes advantage of opportunities of electronic publishing. Features include providing a frame to compare diplomatic versions of witnesses side by side, allowing for images of the witness to be viewed alongside the diplomatic edition, inclusion of audio versions of a text, and providing users with an enhanced typology of notes.</p> 
+ <p>The Versioning Machine (VM) is a software tool designed by literary scholars, programmers, and web designers at several institutions, including An Foras Feasa at the Maynooth University Institute for the Humanities, the Digital Humanities Observatory (DHO), the Maryland Institute for Technology in the Humanities (MITH), and the Office of Digital Collections and Research (DCR) at University of Maryland Libraries. The VM not only provides for elements traditionally found in codex-based critical editions, such as annotation and introductory material, but it also takes advantage of opportunities of electronic publishing. Features include providing a frame to compare diplomatic versions of witnesses side by side, allowing for images of the witness to be viewed alongside the diplomatic edition, inclusion of audio versions of a text, and providing users with an enhanced typology of notes.</p>
 
 <p>The Versioning Machine 1.0 was launched at the 2002 ALLC/ACH (Association for Literary and Linguistic Computing/Association for Computers and the Humanities) Conference in Tubingen, Germany, July 2002. Version 4.0 was released June 2010, with Version 5.0 following in 2015.</p>
 
@@ -78,7 +78,7 @@
 
 <p>To uninstall the VM, simply remove the folder <em>v-machine</em> from your hard drive.</p>
 
-<p>The VM 5.0 XSLT stylesheet does support browser display. Although initial testing of the VM 5.0 showed that the XML files displayed correctly in Firefox and Chrome, you may want to transform the XML to HTML manually using an XSLT processor. You can perform this transformation in oXygen by applying the transformation scenario. Once the browser window opens with the HTML displayed in versions, save the file as a .html document.</p> 
+<p>The VM 5.0 XSLT stylesheet does support browser display. Although initial testing of the VM 5.0 showed that the XML files displayed correctly in Firefox and Chrome, you may want to transform the XML to HTML manually using an XSLT processor. You can perform this transformation in oXygen by applying the transformation scenario. Once the browser window opens with the HTML displayed in versions, save the file as a .html document.</p>
 
 
 <h3 id="interface" class="item">The VM Interface</h3>
@@ -122,7 +122,7 @@ From the <span class="code">&lt;encodingDesc&gt;</span>, the following are suppo
 </ul>
 <p>Note that since the VM will display all of the header information for every witness in the <strong>Bibliographic Information</strong> pop-up, you will want to customize information in the <span class="code">&lt;listWit&gt;</span> as much as possible so that users can distinguish between the various versions.</p>
 
-<p>For example, rather than titling the three versions of Emily Dickinson's poem "There Are Two Ripenings," we included within the <span class="code">&lt;listWit&gt;</span> information that pertains to each source in order to distinguish them. Thus, one version is entitled "A 456: A poem sent to unknown recipient," another is "A Tr60a: A poem sent by Mabel Loomis Todd to Kate Anthon," and still another "H 47: Fascicle 14." When the user scrolls through the information regarding each witness, it is clear which information pertains to each version.</p> 
+<p>For example, rather than titling the three versions of Emily Dickinson's poem "There Are Two Ripenings," we included within the <span class="code">&lt;listWit&gt;</span> information that pertains to each source in order to distinguish them. Thus, one version is entitled "A 456: A poem sent to unknown recipient," another is "A Tr60a: A poem sent by Mabel Loomis Todd to Kate Anthon," and still another "H 47: Fascicle 14." When the user scrolls through the information regarding each witness, it is clear which information pertains to each version.</p>
 
 <div class="code">
 <div>&lt;listWit&gt;</div>
@@ -193,7 +193,7 @@ There are three transcriptional "choices" that are available for display in the 
 <h3 id="enc_images1" class="item">Encoding Images</h3>
 <p>The representation of images is optional. If you wish to display image facsimiles with your texts, however, the VM enables that functionality.</p>
 
-<p>The VM image viewer will support the following image types: jpeg, gif, and png. Images larger than 600 pixels high and 600 pixels wide will be scaled to that size for display purposes.</p> 
+<p>The VM image viewer will support the following image types: jpeg, gif, and png. Images larger than 600 pixels high and 600 pixels wide will be scaled to that size for display purposes.</p>
 
 <p>If you are using the vmachine.xsl styling, your images should be encoded within <span class="code">&lt;graphic&gt;</span>. The value of @url contains the path to the image while the @xml:id value is a unique id for the image. The <span class="code">&lt;graphic&gt;</span> element is placed within <span class="code">&lt;facsimile&gt;</span>, which is placed after the closing <span class="code">&lt;/teiHeader&gt;</span> element and before the opening <span class="code">&lt;text&gt;</span> element.</p>
 <div class="code">
@@ -211,7 +211,7 @@ There are three transcriptional "choices" that are available for display in the 
 </div>
 <p>There is a second option available for encoding references to images to be used by the VM. References to images can be tagged within a <span class="code">&lt;note&gt;</span> with attribute @type with the value of <span class="code">image</span> (i.e., <span class="code">&lt;note type="image"&gt;</span>). The best place to encode this is in the header's <span class="code">&lt;notesStmt&gt;</span>; if you wish to encode this somewhere other than the <span class="code">&lt;notesStmt&gt;</span>, you will still need to follow the instructions below in regard to the contents of <span class="code">&lt;note type="image"&gt;</span>.</p>
 
-<p>If your document does not already contain a <span class="code">&lt;notesStmt&gt;</span>, you will need to enter one within your document's <span class="code">&lt;fileDesc&gt;</span> (typically, after the <span class="code">&lt;publicationStmt&gt;</span> and before the <span class="code">&lt;sourceDesc&gt;</span>) as below:</p> 
+<p>If your document does not already contain a <span class="code">&lt;notesStmt&gt;</span>, you will need to enter one within your document's <span class="code">&lt;fileDesc&gt;</span> (typically, after the <span class="code">&lt;publicationStmt&gt;</span> and before the <span class="code">&lt;sourceDesc&gt;</span>) as below:</p>
 
 <div class="code">
 <div class="indent">
@@ -394,7 +394,7 @@ In parallel segmentation, variants are recorded inline. The VM supports two diff
 </div>
 <p>Let's look at an example from a sample poem. In this Thomas MacGreevy poem, "Nocturne," the third line varies in two versions by one word. Here is line 3 from versions t7989-1-7 and the published version ("pub"):</p>
 <p>
-<img style="border: 1px solid black; display: block;" src="http://v-machine.org/images/documentation/ss03.gif" alt="ss03" /></p>
+<img style="border: 1px solid black; display: block;" src="documentation_files/ss03.gif" alt="ss03" /></p>
 
 <p>The two versions differ in that version a3 begins "Far above," while the version pub begins "Far away."</p>
 
@@ -415,7 +415,7 @@ In parallel segmentation, variants are recorded inline. The VM supports two diff
 
 <p>You may encode several variants within a line, and you may group together within the @wit attribute versions that agree. For instance, the same line in another manuscript version of the poem (version "a1") looks like this:</p>
 
-<p><img style="border: 1px solid black; display: block;" src="http://v-machine.org/images/documentation/ss04.gif" alt="ss04" /></p>
+<p><img style="border: 1px solid black; display: block;" src="documentation_files/ss04.gif" alt="ss04" /></p>
 
 <p>While this line agrees with the published version in the choice of the word "away," it departs from both versions in two places: (1) its use of the phrase "on through" for "in"; and (2) its end punctuation. Taking into account this version, our variant encoding now looks like this:</p>
 <div class="code">
@@ -477,7 +477,7 @@ In parallel segmentation, variants are recorded inline. The VM supports two diff
 
 <p>Back to MacGreevy. In line 3 of yet another manuscript version of the MacGreevy poem, there is more variation still:</p>
 
-<p><img style="border: 1px solid black; display: block;" src="http://v-machine.org/images/documentation/ss05.gif" alt="ss05" /></p>
+<p><img style="border: 1px solid black; display: block;" src="documentation_files/ss05.gif" alt="ss05" /></p>
 
 <p>Tagging it would render the following:</p>
 <div class="code">
@@ -542,9 +542,9 @@ In parallel segmentation, variants are recorded inline. The VM supports two diff
 
 <p>To address the first two items, let's first compare versions t7989-1-10 and t7989-1-8:</p>
 <div>Version t7989-1-8</div>
-<img style="border: 1px solid black; display: block;" src="http://v-machine.org/images/documentation/ss06ab.gif" alt="ss06ab" />
+<img style="border: 1px solid black; display: block;" src="documentation_files/ss06ab.gif" alt="ss06ab" />
 <div>Version t7989-1-10</div>
-<img style="border: 1px solid black; display: block;" src="http://v-machine.org/images/documentation/ss06b.gif" alt="ss06b" />
+<img style="border: 1px solid black; display: block;" src="documentation_files/ss06b.gif" alt="ss06b" />
 
 <p>Line three of version t7989-1-10 is missing in version t7989-1-8. The VM will support two different ways of encoding this missing line. The first inserts a line with an apparatus with only one reading:</p>
 <div class="code">
@@ -587,7 +587,7 @@ wit="#t7989-1-8"&gt;&lt;/rdg&gt;</div>
 </div>
 <p>The third challenge concerns version t7989-1-7, which contains a line broken into two that other versions represent as a single line:</p>
 <div>Version t7989-1-7</div>
-<p><img style="border: 1px solid black; display: block;" src="http://v-machine.org/images/documentation/ss07b.gif" alt="ss07b" /></p>
+<p><img style="border: 1px solid black; display: block;" src="documentation_files/ss07b.gif" alt="ss07b" /></p>
 
 <p>The VM can handle this variation in one of three ways. First, we might utilize a strategy similar to the <span class="code">&lt;milestone/&gt;</span> method above by inserting a line break (<span class="code">&lt;lb/&gt;</span>) at the appropriate point in version t7989-1-7:</p>
 <div class="code">
@@ -822,12 +822,12 @@ target="#n1"&gt;</span>The author had lost his glasses that day
 href="../documentation.html"&gt;Documentation&lt;/a&gt;&lt;/span&gt;. </span></p>
 
   		<div id="footer">
-  			
+
   			<div class="attribution">
   				&copy; Susan Schreibman, 2002, 2010, 2015
   			</div>
 
-  			
+
   		</div>
         <br class="clear">
   	</div>
