@@ -25,6 +25,29 @@
                         <zone xml:id="zone_oxv_xlw_nfb" lry="237" lrx="179" uly="87" ulx="167"/>
                         <zone xml:id="zone_ktj_ylw_nfb" lry="103" lrx="167" uly="79" ulx="157"/>
                         <zone xml:id="zone_yry_ylw_nfb" lry="287" lrx="159" uly="71" ulx="146"/>
+                        <zone xml:id="zone_cr3_5f5_qfb" lry="287" lrx="147" uly="64" ulx="134"/>
+                        <zone xml:id="zone_chl_vf5_qfb" lry="287" lrx="134" uly="65" ulx="122"/>
+                        <zone xml:id="zone_v51_wf5_qfb" lry="286" lrx="122" uly="64" ulx="111"/>
+                        <zone xml:id="zone_scv_wf5_qfb" lry="286" lrx="111" uly="64" ulx="100"/>
+                        <zone xml:id="zone_csk_xf5_qfb" lry="286" lrx="100" uly="64" ulx="88"/>
+                        <zone xml:id="zone_jpc_yf5_qfb" lry="286" lrx="88" uly="64" ulx="77"/>
+                  </surface>
+                  <surface>
+                        <graphic
+                              url="https://iiif.dl.itc.u-tokyo.ac.jp/iiif/uparl/A006267/A006267-02/A006267-02-0004.tif/full/400,/0/default.jpg"
+                              n="https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/190387/canvas/p4"/>
+                        <zone xml:id="zone_egz_bg5_qfb" lry="287" lrx="355" uly="65" ulx="337"/>
+                        <zone xml:id="zone_q1n_cg5_qfb" lry="288" lrx="337" uly="64" ulx="324"/>
+                        <zone xml:id="zone_mhl_dg5_qfb" lry="287" lrx="329" uly="64" ulx="313"/>
+                        <zone xml:id="zone_tx1_2g5_qfb" lry="288" lrx="316" uly="66" ulx="301"/>
+                        <zone xml:id="zone_lmq_2g5_qfb" lry="288" lrx="304" uly="65" ulx="291"/>
+                        <zone xml:id="zone_a22_fg5_qfb" lry="288" lrx="294" uly="66" ulx="280"/>
+                        <zone xml:id="zone_oz4_fg5_qfb" lry="288" lrx="283" uly="66" ulx="269"/>
+                        <zone xml:id="zone_q5c_gg5_qfb" lry="288" lrx="270" uly="65" ulx="256"/>
+                        <zone xml:id="zone_g1n_gg5_qfb" lry="288" lrx="260" uly="66" ulx="246"/>
+                        <zone xml:id="zone_owy_gg5_qfb" lry="288" lrx="248" uly="67" ulx="234"/>
+                        <zone xml:id="zone_n3r_hg5_qfb" lry="287" lrx="238" uly="65" ulx="223"/>
+                        <zone xml:id="zone_lcp_3g5_qfb" lry="289" lrx="228" uly="67" ulx="212"/>
                   </surface>
             </surfaceGrp>
       </facsimile>
@@ -40,15 +63,25 @@
                         <lb/>　　　<span facs="#zone_oxv_xlw_nfb">張天師𧘻禳瘟疫</span>　　　　洪太尉誤走妖魔
                               <lb/>　　<span facs="#zone_ktj_ylw_nfb">詩曰</span>
                         <lb/>　<span facs="#zone_yry_ylw_nfb">絳幘鷄人報曉籌　尚衣方進翠雲裘　九天閶闔開宫殿　萬</span>
-                        <lb/>　國衣冠拜冕旒　日色𦆵臨仙掌動　香煙欲傍衮龍浮　朝罷 <lb/>　须裁五色詔　佩聲歸到鳳池頭
-                        <lb/>話說大宋仁宗天子在位嘉祐三年三月三日五更三㸃天子駕坐 <lb/>紫宸殿受百官朝賀但見
-                        <lb/>　祥雲迷鳳閣瑞氣罩龍樓含烟御柳拂旌旗带露宫花迎劒㦸天 <lb/>　香影𥚃玉簮珠履聚舟墀仙樂聲中綉襖錦衣扶御駕珍珠簾捲 <lb/>
-                        <lb/>　黄金殿上瓊金舉鳳尾扇開白玉堦前停寳輦隱隱浄鞭三下鑾 <lb/>　層層文武兩班齊
-                        <lb/>當有殿頭官喝道有事出班早奏無事捲簾退朝只見班部叢中宰 <lb/>相趙哲叅政文彦愽出班奏曰日今京師瘟疫盛行民不聊生傷損
-                        <lb/>軍民多矣伏望陛下釋罪寛恩省刑薄稅以禳天災救濟萬民天子 <lb/>聴奏𢚩勑翰林院隨卽草詔一面降赦天下罪囚應有民間稅賦悉
-                        <lb/>皆赦免一面命在京宫觀寺院修設好事𧟄災不料其年瘟疫轉盛 <lb/>仁宗天子聞知龍體不安復㑹百官衆皆計議向那班部中有一大
-                        <lb/>臣越班啓奏天子看時乃是叅知政事范仲淹拜罷起居奏曰目今 <lb/>天災盛行軍民𡍼炭旦夕不能聊生人遭縲絏之厄以臣愚意要𧟄
-                        <lb/>此災可宣嗣漢天師星夜臨朝就京師禁院修設三千六百分羅天 <lb/>大醮奏聞上帝可以𧟄保民間瘟疫仁宗天子准奏急令翰林學土 <lb/>
+                        <lb/>　<span facs="#zone_cr3_5f5_qfb">國衣冠拜冕旒　日色𦆵臨仙掌動　香煙欲傍衮龍浮　朝罷</span>
+                        <lb/>　<span facs="#zone_chl_vf5_qfb">须裁五色詔　佩聲歸到鳳池頭</span>
+                        <lb/><span facs="#zone_v51_wf5_qfb">話說大宋仁宗天子在位嘉祐三年三月三日五更三㸃天子駕坐</span>
+                        <lb/><span facs="#zone_scv_wf5_qfb">紫宸殿受百官朝賀但見</span>
+                        <lb/>　<span facs="#zone_csk_xf5_qfb">祥雲迷鳳閣瑞氣罩龍樓含烟御柳拂旌旗带露宫花迎劒㦸天</span>
+                        <lb/>　<span facs="#zone_jpc_yf5_qfb">香影𥚃玉簮珠履聚舟墀仙樂聲中綉襖錦衣扶御駕珍珠簾捲</span>
+                        <pb n="4"/>
+                        <lb/>　<span facs="#zone_egz_bg5_qfb">黄金殿上瓊金舉鳳尾扇開白玉堦前停寳輦隱隱浄鞭三下鑾</span>
+                        <lb/>　<span facs="#zone_q1n_cg5_qfb">層層文武兩班齊</span>
+                        <lb/><span facs="#zone_mhl_dg5_qfb">當有殿頭官喝道有事出班早奏無事捲簾退朝只見班部叢中宰</span>
+                        <lb/><span facs="#zone_tx1_2g5_qfb">相趙哲叅政文彦愽出班奏曰日今京師瘟疫盛行民不聊生傷損</span>
+                        <lb/><span facs="#zone_lmq_2g5_qfb">軍民多矣伏望陛下釋罪寛恩省刑薄稅以禳天災救濟萬民天子</span>
+                        <lb/><span facs="#zone_a22_fg5_qfb">聴奏𢚩勑翰林院隨卽草詔一面降赦天下罪囚應有民間稅賦悉</span>
+                        <lb/><span facs="#zone_oz4_fg5_qfb">皆赦免一面命在京宫觀寺院修設好事𧟄災不料其年瘟疫轉盛</span>
+                        <lb/><span facs="#zone_q5c_gg5_qfb">仁宗天子聞知龍體不安復㑹百官衆皆計議向那班部中有一大</span>
+                        <lb/><span facs="#zone_g1n_gg5_qfb">臣越班啓奏天子看時乃是叅知政事范仲淹拜罷起居奏曰目今</span>
+                        <lb/><span facs="#zone_owy_gg5_qfb">天災盛行軍民𡍼炭旦夕不能聊生人遭縲絏之厄以臣愚意要𧟄</span>
+                        <lb/><span facs="#zone_n3r_hg5_qfb">此災可宣嗣漢天師星夜臨朝就京師禁院修設三千六百分羅天</span>
+                        <lb/><span facs="#zone_lcp_3g5_qfb">大醮奏聞上帝可以𧟄保民間瘟疫仁宗天子准奏急令翰林學土</span>
                         <lb/>草詔一道天子御筆親書并降御香一炷欽差內外提㸃殿前太尉 <lb/>洪信爲天使前往江西信州龍虎山宣請嗣漢天師張眞人星夜臨
                         <lb/>朝𧘻禳瘟疫就金殿上焚起御香親將丹詔付與洪太尉爲使卽便 <lb/>登程遂去洪信領了聖救辭别天子不敢乆停從人背了詔書金盒
                         <lb/>子盛了御香帶了數十人上了舖馬一行部從離了東京取路逕投 <lb/>信州貴溪縣來於路上但見
