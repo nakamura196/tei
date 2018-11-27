@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="mirador/css/mirador-combined.css">
+  <link rel="stylesheet" type="text/css" href="mirador/plugins/mirador-dragndrop-link-plugin/dragndrop-link.css">
+  <link rel="stylesheet" type="text/css" href="CETEI/css/CETEIcean.css">
+  <link rel="stylesheet" type="text/css" href="CETEI/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+  <title>TEI & IIIF Viewer</title>
+
+</head>
+<body style="background-color: #eee;">
+
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="../">TEI Comparison</a>
+      </div>
+    </nav>
+    <!--/.Navbar-->
+
+  </header>
+
+  <div class="container my-5">
+    <!-- Default form login -->
+    <div class="text-center p-5">
+
+      <p class="h4 mb-4">Enter URL of TEI/XML file</p>
+
+      <!-- Email -->
+      <input type="text" id="resourceUri" class="form-control mb-4" value="https://nakamura196.github.io/tei/v-machine/data/diff.xml">
+
+      <!-- Sign in button -->
+      <button class="btn btn-primary mb-4" id="btn_line">Compare by line&raquo;</button>
+
+      <button class="btn btn-primary mb-4" id="btn_window">Compare by window&raquo;</button>
+
+    </div>
+    <!-- Default form login -->
+
+    <h3 class="mt-5 mb-4 text-center">Example</h3>
+
+
+
+    <!--Second row-->
+    <div class="row">
+
+      <!--Third columnn-->
+      <div class="col-lg-3 mb-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card content-->
+          <div class="card-body text-center">
+            <!--Title-->
+            <h4 class="card-title">
+              絵入り源氏物語＋校異源氏物語
+            </h4>
+            <p>作成：永崎研宣氏（人文情報学研究所）</p>
+            <a href="./diff_line.html?resourceUri=https://nakamura196.github.io/tei/v-machine/data/genji_app.xml" class="btn btn-primary btn-md">Compare by line&raquo;</a>
+            <a href="./diff_window.html?resourceUri=https://nakamura196.github.io/tei/v-machine/data/genji_app.xml" class="btn btn-primary btn-md">Compare by window&raquo;</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--Third columnn-->
+      <div class="col-lg-3 mb-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card content-->
+          <div class="card-body text-center">
+            <!--Title-->
+            <h4 class="card-title">
+              中村式五十音
+            </h4>
+            <a href="./diff_line.html?resourceUri=https://nakamura196.github.io/tei/v-machine/data/nakamura.xml" class="btn btn-primary btn-md">Compare by line&raquo;</a>
+            <a href="./diff_window.html?resourceUri=https://nakamura196.github.io/tei/v-machine/data/nakamura.xml" class="btn btn-primary btn-md">Compare by window&raquo;</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+    </div>
+
+  </div>
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-5">
+      <a href="https://researchmap.jp/nakamura.satoru/?lang=english">Satoru Nakamura</a>. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>.
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <script
+  src="//code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script src="mirador/mirador.min.js"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+
+  <script>
+  $(function() {
+    // ボタンクリックで時刻を更新
+    $('#btn_line').click(function(e) {
+      location.href = "diff_line.html?resourceUri="+$("#resourceUri").val();
+    });
+
+    $('#btn_window').click(function(e) {
+      location.href = "diff_window.html?resourceUri="+$("#resourceUri").val();
+    });
+  });
+</script>
+
+</body>
+</html>

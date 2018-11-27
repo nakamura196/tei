@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <title>TEI & IIIF Viewer</title>
+
+</head>
+<body style="background-color: #eee;">
+
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="./">逐行比对（Text comparison by line）</a>
+      </div>
+    </nav>
+    <!--/.Navbar-->
+
+  </header>
+
+  <div class="container my-5">
+
+    <div class="row">
+      <div class="col-sm-2" id="id_a"></div>
+      <div class="col-sm-10" id="title_a"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2" id="id_b"></div>
+      <div class="col-sm-10" id="title_b"></div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div id="a">
+    </div>
+
+  </div>
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-5">
+      <a href="https://researchmap.jp/nakamura.satoru/?lang=english">Satoru Nakamura</a>. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>.
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <script
+  src="//code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+
+  <script type="text/javascript">
+
+  $(function(){
+
+    //パラメータの取得
+    var vars = getParam();
+    //XMLファイルのURL
+    var resourceUri = vars["resourceUri"]
+    resourceUri = decodeURIComponent(resourceUri)
+
+    $.ajax({
+      url:resourceUri,
+      type:'GET',
+      dataType:'xml',
+      timeout:1000,
+      error:function() {
+        alert("ロード失敗");
+      },
+      success:function(xml){
+
+        var ws = $(xml).find("witness")
+
+        var id_a = $(ws[0]).attr("xml:id")
+        var id_b = $(ws[1]).attr("xml:id")
+
+        $("#title_a").text($(ws[0]).text())
+        $("#title_b").text($(ws[1]).text())
+
+        $("#id_a").text(id_a+":")
+        $("#id_b").text(id_b+":")
+
+        var text_a = ""
+        var text_b = ""
+
+        var nodes = $(xml).find("body").find("p")[0].childNodes
+
+        for(var i = 0; i < nodes.length; i++){
+          var node = nodes[i]
+
+          var tmp_a = ""
+          var tmp_b = ""
+
+          $(node).find("rdg").each(function() {
+            if($(this).attr("wit") == "#"+id_a){
+              tmp_a = $(this).text()
+            } else {
+              tmp_b = $(this).text()
+            }
+          });
+
+          if(tmp_a == "" && tmp_b == ""){
+            text_a += $(node).text()
+            text_b += $(node).text()
+          } else{
+
+            text_a += tmp_a
+            for(var j = 0; j < tmp_a.length; j++){
+              text_b += "　"
+            }
+
+
+            text_b += tmp_b
+            for(var j = 0; j < tmp_b.length; j++){
+              text_a += "　"
+            }
+
+          }
+
+        }
+
+        var col_num = 40
+
+        for(var i = 0; i < text_a.length; i = i + col_num){
+          row = $('<div class="row">')
+          $("#a").append(row)
+          th = $('<div class="col-sm-2">'+id_a+':</div>')
+          row.append(th)
+          td = $('<div class="col-sm-10">')
+          row.append(td)
+          td.append(text_a.substring(i, i+col_num))
+
+          row = $('<div class="row">')
+          $("#a").append(row)
+          th = $('<div class="col-sm-2">'+id_b+':</div>')
+          row.append(th)
+          td = $('<div class="col-sm-10">')
+          row.append(td)
+          td.append(text_b.substring(i, i+col_num))
+
+          $("#a").append($("<hr/>"))
+
+        }
+
+
+
+      }
+    });
+
+
+  });
+
+  function getParam(){
+    var vars = {};
+    var param = location.search.substring(1).split('&');
+    for(var i = 0; i < param.length; i++) {
+      var keySearch = param[i].search(/=/);
+      var key = '';
+      if(keySearch != -1) key = param[i].slice(0, keySearch);
+      var val = param[i].slice(param[i].indexOf('=', 0) + 1);
+      if(key != '') vars[key] = decodeURI(val);
+    }
+    return vars;
+  }
+
+</script>
+</body>
+</html>
