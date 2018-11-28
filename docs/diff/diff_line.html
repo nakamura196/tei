@@ -44,7 +44,10 @@
     <br/>
     <br/>
 
-    <div id="a">
+    <div class="card">
+
+      <div class="card-body" id="a">
+      </div>
     </div>
 
   </div>
@@ -108,6 +111,9 @@
         var text_a = ""
         var text_b = ""
 
+        var arr_a = []
+        var arr_b = []
+
         var nodes = $(xml).find("body").find("p")[0].childNodes
 
         for(var i = 0; i < nodes.length; i++){
@@ -125,20 +131,42 @@
           });
 
           if(tmp_a == "" && tmp_b == ""){
-            text_a += $(node).text()
-            text_b += $(node).text()
+            text = $(node).text()
+            text_a += text
+            text_b += text
+
+            for(var k = 0; k < text.length; k++){
+              arr_a.push("<span>"+text[k]+"</span>")
+              arr_b.push("<span>"+text[k]+"</span>")
+            }
+
           } else{
 
             text_a += tmp_a
+
+            for(var k = 0; k < tmp_a.length; k++){
+              arr_a.push("<span class='text-danger'>"+tmp_a[k]+"</span>")
+            }
+
             for(var j = 0; j < tmp_a.length; j++){
               text_b += "　"
+              arr_b.push("<span>　</span>")
             }
 
+            //----
 
             text_b += tmp_b
+
+            for(var k = 0; k < tmp_b.length; k++){
+              arr_b.push("<span class='text-primary'>"+tmp_b[k]+"</span>")
+            }
+
             for(var j = 0; j < tmp_b.length; j++){
               text_a += "　"
+              arr_a.push("<span>　</span>")
             }
+
+
 
           }
 
@@ -146,14 +174,16 @@
 
         var col_num = 40
 
-        for(var i = 0; i < text_a.length; i = i + col_num){
+        for(var i = 0; i < arr_a.length; i = i + col_num){
           row = $('<div class="row">')
           $("#a").append(row)
           th = $('<div class="col-sm-2">'+id_a+':</div>')
           row.append(th)
           td = $('<div class="col-sm-10">')
           row.append(td)
-          td.append(text_a.substring(i, i+col_num))
+          for(var j = i; j < i + col_num; j++){
+            td.append(arr_a[j])
+          }
 
           row = $('<div class="row">')
           $("#a").append(row)
@@ -161,32 +191,56 @@
           row.append(th)
           td = $('<div class="col-sm-10">')
           row.append(td)
-          td.append(text_b.substring(i, i+col_num))
+          for(var j = i; j < i + col_num; j++){
+            td.append(arr_b[j])
+          }
 
           $("#a").append($("<hr/>"))
-
         }
 
+        /*
+        for(var i = 0; i < text_a.length; i = i + col_num){
+        row = $('<div class="row">')
+        $("#a").append(row)
+        th = $('<div class="col-sm-2">'+id_a+':</div>')
+        row.append(th)
+        td = $('<div class="col-sm-10">')
+        row.append(td)
+        td.append(text_a.substring(i, i+col_num))
 
+        row = $('<div class="row">')
+        $("#a").append(row)
+        th = $('<div class="col-sm-2">'+id_b+':</div>')
+        row.append(th)
+        td = $('<div class="col-sm-10">')
+        row.append(td)
+        td.append(text_b.substring(i, i+col_num))
+
+        $("#a").append($("<hr/>"))
 
       }
-    });
+      */
 
 
+
+    }
   });
 
-  function getParam(){
-    var vars = {};
-    var param = location.search.substring(1).split('&');
-    for(var i = 0; i < param.length; i++) {
-      var keySearch = param[i].search(/=/);
-      var key = '';
-      if(keySearch != -1) key = param[i].slice(0, keySearch);
-      var val = param[i].slice(param[i].indexOf('=', 0) + 1);
-      if(key != '') vars[key] = decodeURI(val);
-    }
-    return vars;
+
+});
+
+function getParam(){
+  var vars = {};
+  var param = location.search.substring(1).split('&');
+  for(var i = 0; i < param.length; i++) {
+    var keySearch = param[i].search(/=/);
+    var key = '';
+    if(keySearch != -1) key = param[i].slice(0, keySearch);
+    var val = param[i].slice(param[i].indexOf('=', 0) + 1);
+    if(key != '') vars[key] = decodeURI(val);
   }
+  return vars;
+}
 
 </script>
 </body>
