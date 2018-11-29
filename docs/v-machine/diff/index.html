@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="mirador/css/mirador-combined.css">
+  <link rel="stylesheet" type="text/css" href="mirador/plugins/mirador-dragndrop-link-plugin/dragndrop-link.css">
+  <link rel="stylesheet" type="text/css" href="CETEI/css/CETEIcean.css">
+  <link rel="stylesheet" type="text/css" href="CETEI/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+  <title>TEI Comparison</title>
+
+</head>
+<body style="background-color: #eee;">
+
+  <header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand">水滸伝・テキスト比較</a>
+      </div>
+    </nav>
+    <!--/.Navbar-->
+
+  </header>
+
+  <div class="container my-5">
+
+    <div class="card">
+
+      <div class="card-body">
+        <table class="table">
+          <tr>
+            <th>回</th>
+            <th>VM</th>
+            <th>分窗口比对</th>
+            <th>逐行比对</th>
+          </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+<!--Footer-->
+<footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+  <!--Copyright-->
+  <div class="footer-copyright py-5">
+    <a href="https://researchmap.jp/nakamura.satoru/?lang=english">Satoru Nakamura</a>. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>.
+  </div>
+  <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+<script
+src="//code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<script src="mirador/mirador.min.js"></script>
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+
+<script>
+
+for(var i = 1; i < 101; i++){
+  var tr = $("<tr>");
+  $("#tbody").append(tr)
+
+  var td = $("<td>")
+  tr.append(td)
+  td.append(i)
+
+  td = $("<td>")
+  tr.append(td)
+
+  var url = "https://nakamura196.github.io/tei/v-machine/diff/"+( '000' + i ).slice( -3 ) +".xml"
+
+  var a = $("<a>")
+  td.append(a)
+  a.attr("href", url)
+  a.append("View &raquo;")
+
+  td = $("<td>")
+  tr.append(td)
+
+  var a = $("<a>")
+  td.append(a)
+  a.attr("href", "https://nakamura196.github.io/tei/diff/diff_window.html?resourceUri="+url)
+  a.append("View &raquo;")
+
+  td = $("<td>")
+  tr.append(td)
+
+  var a = $("<a>")
+  td.append(a)
+  a.attr("href", "https://nakamura196.github.io/tei/diff/diff_line.html?resourceUri="+url)
+  a.append("View &raquo;")
+
+}
+
+</script>
+
+</body>
+</html>
