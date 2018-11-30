@@ -32,11 +32,11 @@
   <div class="container my-5">
 
     <div class="row">
-      <div class="col">
+      <div class="col-md-6">
         <h4 id="title_a"></h4>
       </div>
 
-      <div class="col">
+      <div class="col-md-6">
         <h4 id="title_b"></h4>
       </div>
 
@@ -45,7 +45,7 @@
     <br/>
 
     <div class="row">
-      <div class="col">
+      <div class="col-md-6">
         <div class="card">
 
           <div class="card-body" id="a">
@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <div class="col">
+      <div class="col-md-6">
         <div class="card">
 
           <div class="card-body" id="b">
@@ -99,6 +99,13 @@
     //XMLファイルのURL
     var resourceUri = vars["resourceUri"]
     resourceUri = decodeURIComponent(resourceUri)
+
+    var type = "color"
+    if(vars["type"] == "simple"){
+      type = "simple"
+    }
+
+    var size = vars["size"] != null ? Number(vars["size"]) : 30
 
     $.ajax({
       url:resourceUri,
@@ -177,42 +184,42 @@
           }
         }
 
-        var col_num = 30
+        var col_num = size
 
-        for(var i = 0; i < arr_a.length; i = i + col_num){
-          for(var j = i; j < i + col_num; j++){
-            $("#a").append(arr_a[j])
-            $("#b").append(arr_b[j])
+        if(type == "color"){
+          for(var i = 0; i < arr_a.length; i = i + col_num){
+            for(var j = i; j < i + col_num; j++){
+              $("#a").append(arr_a[j])
+              $("#b").append(arr_b[j])
+            }
+            $("#a").append("<br/>")
+            $("#b").append("<br/>")
           }
-          $("#a").append("<br/>")
-          $("#b").append("<br/>")
+        } else if(type == "simple"){
+          for(var i = 0; i < text_a.length; i = i + col_num){
+            $("#a").append(text_a.substring(i, i+col_num)+"<hr/>")
+            $("#b").append(text_b.substring(i, i+col_num)+"<hr/>")
+          }
         }
 
-        /*
-        for(var i = 0; i < text_a.length; i = i + col_num){
-        $("#a").append(text_a.substring(i, i+col_num)+"<br/>")
-        $("#b").append(text_b.substring(i, i+col_num)+"<br/>")
       }
-      */
+    });
 
-    }
+
   });
 
-
-});
-
-function getParam(){
-  var vars = {};
-  var param = location.search.substring(1).split('&');
-  for(var i = 0; i < param.length; i++) {
-    var keySearch = param[i].search(/=/);
-    var key = '';
-    if(keySearch != -1) key = param[i].slice(0, keySearch);
-    var val = param[i].slice(param[i].indexOf('=', 0) + 1);
-    if(key != '') vars[key] = decodeURI(val);
+  function getParam(){
+    var vars = {};
+    var param = location.search.substring(1).split('&');
+    for(var i = 0; i < param.length; i++) {
+      var keySearch = param[i].search(/=/);
+      var key = '';
+      if(keySearch != -1) key = param[i].slice(0, keySearch);
+      var val = param[i].slice(param[i].indexOf('=', 0) + 1);
+      if(key != '') vars[key] = decodeURI(val);
+    }
+    return vars;
   }
-  return vars;
-}
 
 </script>
 </body>
