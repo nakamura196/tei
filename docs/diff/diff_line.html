@@ -31,15 +31,9 @@
 
   <div class="container my-5">
 
-    <div class="row">
-      <div class="col-sm-2" id="id_a"></div>
-      <div class="col-sm-10" id="title_a"></div>
-    </div>
+    <div id="legend"></div>
 
-    <div class="row">
-      <div class="col-sm-2" id="id_b"></div>
-      <div class="col-sm-10" id="title_b"></div>
-    </div>
+
 
     <br/>
     <br/>
@@ -79,6 +73,43 @@
 
   <script type="text/javascript">
 
+  function traverse(tree) {
+    $(tree).contents().each(function() {
+      if (this.nodeType == 3) { // text node
+        for(var i = 0; i < id_arr.length; i++){
+          text_map[id_arr[i]] = text_map[id_arr[i]] + $(this).text().trim()
+        }
+      } else {
+        if(this.nodeName == "app"){
+          wits = $(this).children()
+          wits.each(function() {
+            ids = $(this).attr("wit").replace("#", "").split(" ")
+            text = $(this).text()
+
+            for(var i = 0; i < id_arr.length; i++){
+              id = id_arr[i]
+              text_tmp = ""
+              if(ids.indexOf(id) != -1){
+                text_tmp += text
+              } else {
+                for(var k = 0; k < text.length; k++){
+                  text_tmp += "　"
+                }
+              }
+              text_map[id_arr[i]] = text_map[id_arr[i]] + text_tmp
+            }
+          })
+        } else {
+          traverse(this);
+        }
+      }
+    });
+  }
+
+  var text_all = ""
+  var id_arr = []
+  var text_map = {}
+
   $(function(){
 
     //パラメータの取得
@@ -86,11 +117,6 @@
     //XMLファイルのURL
     var resourceUri = vars["resourceUri"]
     resourceUri = decodeURIComponent(resourceUri)
-
-    var type = "color"
-    if(vars["type"] == "simple"){
-      type = "simple"
-    }
 
     var size = vars["size"] != null ? Number(vars["size"]) : 40
 
@@ -106,145 +132,67 @@
 
         var ws = $(xml).find("witness")
 
-        var id_a = $(ws[0]).attr("xml:id")
-        var id_b = $(ws[1]).attr("xml:id")
+        for(var i = 0; i < ws.length; i++){
+          id_arr.push($(ws[i]).attr("xml:id"))
 
-        $("#title_a").text($(ws[0]).text())
-        $("#title_b").text($(ws[1]).text())
+          var row = $("<div class='row'>")
+          $("#legend").append(row)
 
-        $("#id_a").text(id_a+":")
-        $("#id_b").text(id_b+":")
+          var col = $("<div class='col-sm-2'>")
+          row.append(col)
+          col.append(id_arr[i]+":")
 
-        var text_a = ""
-        var text_b = ""
-
-        var arr_a = []
-        var arr_b = []
-
-        var nodes = $(xml).find("body").find("p")[0].childNodes
-
-        for(var i = 0; i < nodes.length; i++){
-          var node = nodes[i]
-
-          var tmp_a = ""
-          var tmp_b = ""
-
-          $(node).find("rdg").each(function() {
-            if($(this).attr("wit") == "#"+id_a){
-              tmp_a = $(this).text()
-            } else {
-              tmp_b = $(this).text()
-            }
-          });
-
-          if(tmp_a == "" && tmp_b == ""){
-            text = $(node).text()
-            text_a += text
-            text_b += text
-
-            for(var k = 0; k < text.length; k++){
-              arr_a.push("<span>"+text[k]+"</span>")
-              arr_b.push("<span>"+text[k]+"</span>")
-            }
-
-          } else{
-
-            text_a += tmp_a
-
-            for(var k = 0; k < tmp_a.length; k++){
-              arr_a.push("<span class='text-danger'>"+tmp_a[k]+"</span>")
-            }
-
-            for(var j = 0; j < tmp_a.length; j++){
-              text_b += "　"
-              arr_b.push("<span>　</span>")
-            }
-
-            //----
-
-            text_b += tmp_b
-
-            for(var k = 0; k < tmp_b.length; k++){
-              arr_b.push("<span class='text-primary'>"+tmp_b[k]+"</span>")
-            }
-
-            for(var j = 0; j < tmp_b.length; j++){
-              text_a += "　"
-              arr_a.push("<span>　</span>")
-            }
-
-
-
-          }
+          var col = $("<div class='col-sm-10'>")
+          row.append(col)
+          col.append($(ws[i]).text())
 
         }
+
+        for(var i = 0; i < id_arr.length; i++){
+          text_map[id_arr[i]] = ""
+        }
+
+        traverse($(xml).find("body"))
 
         var col_num = size
 
-        if(type == "color"){
-          for(var i = 0; i < arr_a.length; i = i + col_num){
-            row = $('<div class="row">')
-            $("#a").append(row)
-            th = $('<div class="col-sm-2">'+id_a+':</div>')
-            row.append(th)
-            td = $('<div class="col-sm-10">')
-            row.append(td)
-            for(var j = i; j < i + col_num; j++){
-              td.append(arr_a[j])
-            }
+        var text_0 = text_map[id_arr[0]]
+
+        for(var i = 0; i < text_0.length; i = i + col_num){
+
+          for(var j = 0; j < id_arr.length; j++){
+            id = id_arr[j]
+            text = text_map[id_arr[j]]
 
             row = $('<div class="row">')
             $("#a").append(row)
-            th = $('<div class="col-sm-2">'+id_b+':</div>')
+            th = $('<div class="col-sm-2">'+id+':</div>')
             row.append(th)
             td = $('<div class="col-sm-10">')
             row.append(td)
-            for(var j = i; j < i + col_num; j++){
-              td.append(arr_b[j])
-            }
-
-            $("#a").append($("<hr/>"))
+            td.append(text.substring(i, i+col_num))
           }
-        } else if(type == "simple"){
-          for(var i = 0; i < text_a.length; i = i + col_num){
-            row = $('<div class="row">')
-            $("#a").append(row)
-            th = $('<div class="col-sm-2">'+id_a+':</div>')
-            row.append(th)
-            td = $('<div class="col-sm-10">')
-            row.append(td)
-            td.append(text_a.substring(i, i+col_num))
 
-            row = $('<div class="row">')
-            $("#a").append(row)
-            th = $('<div class="col-sm-2">'+id_b+':</div>')
-            row.append(th)
-            td = $('<div class="col-sm-10">')
-            row.append(td)
-            td.append(text_b.substring(i, i+col_num))
+          $("#a").append($("<hr/>"))
 
-            $("#a").append($("<hr/>"))
-
-          }
         }
-    }
+      }
+    });
+
   });
 
-
-});
-
-function getParam(){
-  var vars = {};
-  var param = location.search.substring(1).split('&');
-  for(var i = 0; i < param.length; i++) {
-    var keySearch = param[i].search(/=/);
-    var key = '';
-    if(keySearch != -1) key = param[i].slice(0, keySearch);
-    var val = param[i].slice(param[i].indexOf('=', 0) + 1);
-    if(key != '') vars[key] = decodeURI(val);
+  function getParam(){
+    var vars = {};
+    var param = location.search.substring(1).split('&');
+    for(var i = 0; i < param.length; i++) {
+      var keySearch = param[i].search(/=/);
+      var key = '';
+      if(keySearch != -1) key = param[i].slice(0, keySearch);
+      var val = param[i].slice(param[i].indexOf('=', 0) + 1);
+      if(key != '') vars[key] = decodeURI(val);
+    }
+    return vars;
   }
-  return vars;
-}
 
 </script>
 </body>
